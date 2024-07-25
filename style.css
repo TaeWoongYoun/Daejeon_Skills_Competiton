@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* 메인페이지 - 헤더 영역 */
+header {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  height: 80px;
+ }
+
+header > ul {
+  display: flex;
+}
+
+header ul li {
+  width: 150px;
+  margin-top: 30px;
+}
+
+header ul li:hover ul {
+  display: block;
+  animation: fadein 0.5s;
+}
+
+header ul li a:hover {
+  font-weight: 1000;
+}
+
+header ul li ul li a:hover {
+  font-weight: 1000;
+}
+
+header ul li ul {
+  display: none;
+}
+
+.logo {
+  width: 180px;
+  height: 70px;
+}
+
+header > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header span > label {
+  padding: 0 10px;
+}
+
+header span > label:hover {
+  font-weight: 1000;
+}
+
+.menu_input {
+  padding: 10px;
+}
+
+.menu_btn {
+  padding: 5px 10px;
+  color: white;
+  background-color: black;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+input[name="menu"],
+input[name="login_menu"] {
+  display: none;
+}
+
+.ham_menu {
+  cursor: pointer;
+}
+
+.close {
+  display: none;
+}
+
+.hamburger_menu {
+  padding: 30px;
+  width: 200px;
+  z-index: 10000;
+  position: fixed;
+  background-color: rgb(0,0,0,0.3);
+  top: 0;
+  right: 0;
+  margin: 0 auto;
+  margin-top: 80px;
+  height: 100%;
+}
+
+.hamburger_menu {
+  display: none;
+}
+
+#hamburgerLabel,
+#closeLabel {
+  display: none;
+}
+
+#hamburger:checked ~ .hamburger_menu {
+  display: block;
+  animation: fadein 0.5s;
+}
+
+#close:checked .hamburger_menu {
+  display: none;
+}
+#close:checked ~ #hamburgerLabel,
+#hamburger:checked ~ #closeLabel {
+  display: block;
+  animation: fadein 0.5s;
+}
+
+/* 로그인&회원가입 모달 */
+.modal {
+  display: none;
+  justify-content: center;
+  background-color: rgb(0, 0, 0, 0.5);
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10000;
+}
+
+.modal_body {
+  margin-top: 100px;
+  padding: 50px;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal label:hover {
+  cursor: pointer;
+}
+
+.login_input {
+  width: 300px;
+  height: 50px;
+  margin: 10px;
+  border: solid black 1px;
+  border-radius: 10px;
+}
+
+.check {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: black;
+  border-radius: 10px;
+  color: white;
+}
+
+
+input[id="login"]:checked ~ #loginModal,
+input[id="register"]:checked ~ #registerModal {
+  display: flex;
+}
+
+#check:checked ~ .modal {
+  display: none;
+}    
