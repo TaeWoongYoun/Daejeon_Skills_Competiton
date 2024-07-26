@@ -270,6 +270,7 @@ input[name="play&stop"],
 
 /* 메인페이지 -> 경북Best5 영역 */
 h1 {
+  text-align: center;
   font-size: 40px;
   font-weight: 200;
   margin-bottom: 10px;
@@ -356,4 +357,132 @@ input[name="best5"] {
 #하회마을Modal > .modal_body,
 #호미곶Modal > .modal_body {
   width: 500px;
+}
+
+/* 경북관광갤러리 영역 */
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.gallery_div {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cube-container {
+  perspective: 1000px;
+  margin: 0 50px;
+}
+
+.cube {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: transform 1s;
+}
+
+.cube:hover {
+  transform: rotateY(-270deg);
+}
+
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  backface-visibility: hidden;
+}
+
+.front {
+  transform: rotateY(0deg) translateZ(100px);
+}
+.back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+
+/* 스타일 추가 */
+.front,
+.back,
+.right {
+  background-size: cover;
+  background-position: center;
+}
+
+#스페이스워크front {
+  background-image: url("./공통제공파일/A모듈/갤러리/01_스페이스워크/01_스페이스워크.jpg");
+}
+
+#스페이스워크back {
+  background-image: url("./공통제공파일/A모듈/갤러리/01_스페이스워크/02_스페이스워크.jpg");
+}
+
+#스페이스워크right {
+  background-image: url("./공통제공파일/A모듈/갤러리/01_스페이스워크/03_스페이스워크.jpg");
+}
+
+#은어다리front {
+  background-image: url("./공통제공파일/A모듈/갤러리/02_은어다리/01_은어다리.jpg");
+}
+
+#은어다리back {
+  background-image: url("./공통제공파일/A모듈/갤러리/02_은어다리/02_은어다리.jpg");
+}
+
+#은어다리right {
+  background-image: url("./공통제공파일/A모듈/갤러리/02_은어다리/03_은어다리.jpg");
+}
+
+#연화지front {
+  background-image: url("./공통제공파일/A모듈/갤러리/03_연화지/01_연화지.jpg");
+}
+
+#연화지back {
+  background-image: url("./공통제공파일/A모듈/갤러리/03_연화지/02_연화지.jpg");
+}
+
+#연화지right {
+  background-image: url("./공통제공파일/A모듈/갤러리/03_연화지/03_연화지.jpg");
+}
+
+.left {
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  background-color: rgb(179, 179, 179);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.left h3 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.left p {
+  font-size: 12px;
+  margin: 5px;
+}
+
+.left button {
+  border: 0;
+  margin-top: 7px;
+  padding:  10px 60px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
