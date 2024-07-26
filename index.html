@@ -1,121 +1,172 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>경북그랜드문화투어</title>
     <link rel="stylesheet" href="/style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- 헤더 시작 -->
     <header>
-        <img class="logo" src="./logo.png" alt="" />
-        <ul>
+      <img class="logo" src="./logo.png" alt="" />
+      <ul>
+        <li><a href="#">투어경북</a></li>
+        <li>
+          <a href="#">숙박</a>
+          <ul>
+            <li><a href="#">호텔</a></li>
+            <li><a href="#">펜션</a></li>
+            <li><a href="#">게스트하우스</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">문화유산</a>
+          <ul>
+            <li><a href="#">세계문화유산</a></li>
+            <li><a href="#">경주의역사</a></li>
+            <li><a href="#">분류별유산</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">체험예약/안내</a>
+          <ul>
+            <li><a href="#">체험예약</a></li>
+            <li><a href="#">관광안내</a></li>
+            <li><a href="#">주변관광지</a></li>
+            <li><a href="#">문화재투어</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <input
+            class="menu_input"
+            type="text"
+            placeholder="검색어를 입력해주세요."
+          />
+        </li>
+        <li><button class="menu_btn">검색하기</button></li>
+      </ul>
+
+      <span>
+        <label for="login"> 로그인 </label>
+        <label for="register">회원가입</label>
+        <input id="login" type="radio" name="login_menu" />
+        <input id="register" type="radio" name="login_menu" />
+        <input id="check" type="radio" name="login_menu" />
+        <!-- 로그인&회원가입 모달 시작 -->
+        <div id="loginModal" class="modal">
+          <div class="modal_body">
+            <h3>로그인</h3>
+            <input
+              class="login_input"
+              id="name"
+              type="text"
+              placeholder="  아이디를 입력해주세요."
+            />
+            <input
+              class="login_input"
+              id="password"
+              type="password"
+              placeholder="  비밀번호를 입력해주세요."
+            />
+            <label class="check" for="check">확인</label>
+          </div>
+        </div>
+
+        <div id="registerModal" class="modal">
+          <div class="modal_body">
+            <h3>회원가입</h3>
+            <input
+              class="login_input"
+              id="name"
+              type="text"
+              placeholder="  성명을 입력해주세요."
+            />
+            <input
+              class="login_input"
+              id="username"
+              type="text"
+              placeholder="  아이디를 입력해주세요."
+            />
+            <input
+              class="login_input"
+              id="username"
+              type="text"
+              placeholder="  이름을 입력해주세요."
+            />
+            <input
+              class="login_input"
+              id="password"
+              type="password"
+              placeholder="  비밀번호를 입력해주세요."
+            />
+            <input
+              class="login_input"
+              id="phone_num"
+              type="text"
+              placeholder="  전화번호를 입력해주세요."
+            />
+
+            <label class="check" for="check">확인</label>
+          </div>
+        </div>
+        <!-- 로그인&회원가입 모달 끝 -->
+
+        <!-- 헤더 영역 -> 햄버거 메뉴 바 시작 -->
+        <input id="hamburger" type="radio" name="menu" />
+        <input id="close" type="radio" name="menu" checked />
+        <label id="hamburgerLabel" for="hamburger">
+          <img class="ham_menu" src="./bars.svg" alt="" width="25px"
+        /></label>
+        <label id="closeLabel" for="close">
+          <img class="ham_menu" src="./x.svg" alt="" width="25px"
+        /></label>
+        <div class="hamburger_menu">
+          <ul>
             <li><a href="#">투어경북</a></li>
             <li>
-                <a href="#">숙박</a>
-                <ul>
-                    <li><a href="#">호텔</a></li>
-                    <li><a href="#">펜션</a></li>
-                    <li><a href="#">게스트하우스</a></li>
-                </ul>
+              <a href="#">숙박</a>
+              <ul>
+                <li><a href="#">호텔</a></li>
+                <li><a href="#">펜션</a></li>
+                <li><a href="#">게스트하우스</a></li>
+              </ul>
             </li>
             <li>
-                <a href="#">문화유산</a>
-                <ul>
-                    <li><a href="#">세계문화유산</a></li>
-                    <li><a href="#">경주의역사</a></li>
-                    <li><a href="#">분류별유산</a></li>
-                </ul>
+              <a href="#">문화유산</a>
+              <ul>
+                <li><a href="#">세계문화유산</a></li>
+                <li><a href="#">경주의역사</a></li>
+                <li><a href="#">분류별유산</a></li>
+              </ul>
             </li>
             <li>
-                <a href="#">체험예약/안내</a>
-                <ul>
-                    <li><a href="#">체험예약</a></li>
-                    <li><a href="#">관광안내</a></li>
-                    <li><a href="#">주변관광지</a></li>
-                    <li><a href="#">문화재투어</a></li>
-                </ul>
+              <a href="#">체험예약/안내</a>
+              <ul>
+                <li><a href="#">체험예약</a></li>
+                <li><a href="#">관광안내</a></li>
+                <li><a href="#">주변관광지</a></li>
+                <li><a href="#">문화재투어</a></li>
+              </ul>
             </li>
-        </ul>
-        <ul>
-            <li><input class="menu_input" type="text" placeholder="검색어를 입력해주세요."/></li>
-            <li><button class="menu_btn">검색하기</button></li>
-        </ul>
-
-        <span>
-            <label for="login"> 로그인 </label>
-            <label for="register">회원가입</label>
-            <input id="login" type="radio" name="login_menu" />
-            <input id="register" type="radio" name="login_menu" />
-            <input id="check" type="radio" name="login_menu" />
-            <!-- 로그인&회원가입 모달 시작 -->
-            <div id="loginModal" class="modal">
-                <div class="modal_body">
-                    <h3>로그인</h3>
-                    <input class="login_input" id="name" type="text" placeholder="  아이디를 입력해주세요." />
-                    <input class="login_input" id="password" type="password" placeholder="  비밀번호를 입력해주세요." />
-                    <label class="check" for="check">확인</label>
-                </div>
-            </div>
-
-            <div id="registerModal" class="modal">
-                <div class="modal_body">
-                    <h3>회원가입</h3>
-                    <input class="login_input" id="name" type="text" placeholder="  성명을 입력해주세요." />
-                    <input class="login_input" id="username" type="text" placeholder="  아이디를 입력해주세요." />
-                    <input class="login_input" id="username" type="text" placeholder="  이름을 입력해주세요." />
-                    <input class="login_input" id="password" type="password" placeholder="  비밀번호를 입력해주세요." />
-                    <input class="login_input" id="phone_num" type="text" placeholder="  전화번호를 입력해주세요." />
-
-                    <label class="check" for="check">확인</label>
-                </div>
-            </div>
-            <!-- 로그인&회원가입 모달 끝 -->
-
-            <!-- 헤더 영역 -> 햄버거 메뉴 바 시작 -->
-            <input id="hamburger" type="radio" name="menu" />
-            <input id="close" type="radio" name="menu" checked/>
-            <label id="hamburgerLabel" for="hamburger">
-                <img class="ham_menu" src="./bars.svg" alt=""width="25px" /></label>
-            <label id="closeLabel" for="close">
-                <img class="ham_menu" src="./x.svg" alt="" width="25px" /></label>
-                <div class="hamburger_menu">
-                    <ul>
-                        <li><a href="#">투어경북</a></li>
-                        <li>
-                            <a href="#">숙박</a>
-                            <ul>
-                                <li><a href="#">호텔</a></li>
-                                <li><a href="#">펜션</a></li>
-                                <li><a href="#">게스트하우스</a></li>
-                            </ul>
-                        </li>
-                    <li>
-                        <a href="#">문화유산</a>
-                        <ul>
-                            <li><a href="#">세계문화유산</a></li>
-                            <li><a href="#">경주의역사</a></li>
-                            <li><a href="#">분류별유산</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">체험예약/안내</a>
-                        <ul>
-                            <li><a href="#">체험예약</a></li>
-                            <li><a href="#">관광안내</a></li>
-                            <li><a href="#">주변관광지</a></li>
-                            <li><a href="#">문화재투어</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <!-- 헤더 영역 -> 햄버거 메뉴 바 끝 -->
-        </span>
+          </ul>
+        </div>
+        <!-- 헤더 영역 -> 햄버거 메뉴 바 끝 -->
+      </span>
     </header>
     <!-- 헤더 끝 -->
-</body>
 
+    <!-- 비주얼 영역 시작 -->
+    <div class="visual">
+        <input id="play" type="radio" name="play&stop" checked />
+        <input id="stop" type="radio" name="play&stop" />
+        <div class="slideimg"></div>
+        <label id="playLabel" for="play">재생</label>
+        <label id="stopLabel" for="stop">일시정지</label>
+    </div>
+    <!-- 비주얼 영역 끝 -->
+  </body>
 </html>
